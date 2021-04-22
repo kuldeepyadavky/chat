@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import axios from 'axios'
-import { getDefaultNormalizer } from '@testing-library/dom'
 
 const LoginForm = () => {
 	const [username, setUsername] = useState('')

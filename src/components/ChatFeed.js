@@ -7,7 +7,7 @@ const ChatFeed = (props) => {
 
 	const chat = chats && chats[activeChat]
 
-	const renderReadReceipts = (message, isMyMessage) => {
+	const renderReadReceipts = (message, isMyMessage) =>
 		chat.people.map(
 			(person, index) =>
 				person.last_read === message.id && (
@@ -16,12 +16,12 @@ const ChatFeed = (props) => {
 						className='read-receipt'
 						style={{
 							float: isMyMessage ? 'right' : 'left',
-							backgroundImage: `url(${person?.person?.avatar})`,
+							backgroundImage:
+								person.person.avatar && `url(${person.person.avatar})`,
 						}}
 					/>
 				),
 		)
-	}
 
 	const renderMessages = () => {
 		const keys = Object.keys(messages)
