@@ -124,6 +124,8 @@
   font-size: 16px;
   border-radius: 6px;
   max-width: 60%;
+  display: flex;
+  overflow-wrap: anywhere;
 }
 
 .message-image {
